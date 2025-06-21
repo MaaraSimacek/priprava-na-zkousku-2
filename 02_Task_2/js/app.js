@@ -1,3 +1,5 @@
+// import { use } from "react";
+
 const users = [
     {
         id: 1,
@@ -41,11 +43,35 @@ const users = [
         lastName: "Moffett",
         email: "cmoffett4@purevolume.com",
         ipAddress: "200.4.236.255",
-        language: "French",
+        language: "English",
         nin: "1288790260",
     },
 ];
 
-/**
- * Write your code below!
- */
+// FILTER
+const englishUsers = users.filter( (user) => {
+    return user.language === 'English'
+} )
+console.table(englishUsers)
+
+
+// MAP
+
+const simpleUsers = users.map((user) => { return {
+    id: user.id,
+    email: user.email,
+}})
+console.log(simpleUsers)
+
+
+
+// const jmena = ['Alena', 'Bára', 'Cyril a Metoděj', 'Diana']
+// const delky = jmena.map( (jmeno) => {return jmeno.length} )
+
+// const osoby = jmena.map((jmeno) => { return {
+//     krestniJmeno: jmeno,
+//     delkaJmena: jmeno.length,
+// }})
+
+// console.log(delky)
+// console.log(osoby)
